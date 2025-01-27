@@ -227,8 +227,23 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+      <tr>
+        <td><h3 style="color: green;">Carrito </h3></td>
 
-      <app-product-list-component> </app-product-list-component>
+        <td>{{ counter }}</td>
+      </tr>
+
+      <app-product-list-component [message]="entryMessage" [img]="entryImg" (purchase)="add($event)"> </app-product-list-component>
+      <app-product-list-component [message]="entryMessage2" [img]="entryImg"> </app-product-list-component>
+      <app-product-list-component [message]="entryMessage3" [img]="entryImg"> </app-product-list-component>
+
+
+
+
+
+
+
+
 
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
