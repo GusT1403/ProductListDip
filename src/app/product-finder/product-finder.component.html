@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <input id="name" formControlName="name" placeholder="name">
+        @if(form.get('name')?.invalid && form.get('name')?.touched) {
+            @if (form.get("name")?.hasError("required")) {
+                <span class="error">Name required</span>
+            }
+        }
+    </div>
+    <div>
+        <button type="submit" [disabled]="form.invalid">Search</button>
+    </div>
+</form>
