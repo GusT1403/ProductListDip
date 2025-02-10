@@ -1,7 +1,14 @@
-a<app-header></app-header>
-  <div class="container">
-    @for (data of productData; track data.id){
-      <app-product-list-component [product]="data" (purchase)="getInfo($event)">
-      </app-product-list-component>
-    }
-  </div>    
+<app-header></app-header>
+<main class="main">
+ 
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet />

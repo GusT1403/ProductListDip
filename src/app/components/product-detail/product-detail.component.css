@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(16,16,20);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    color: #fff;
+}
+
+.card {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.card-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.card-description {
+    margin-bottom: 20px;
+}
+
+.options {
+    flex: 1;
+    background-color: rgb(16,16,20);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.options h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    margin-bottom: 10px;
+}
+
+.card-button {
+    background-color: #26bbff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.card-button-store{
+    background-color: #404044;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.card-button:hover, .card-button-store:hover {
+    background-color: #72d3ff;
+}
+
+.card-button-store {
+    background-color: #404044;
+}
+
+.card-button-store:hover {
+    background-color: #a6a6a6;
+}

@@ -1,25 +1,15 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProductListComponentComponent } from './product-list-component/product-list-component.component';
-import { HeaderComponent } from './header/header.component';
-import { DATA } from 'src/assets/data';
-import { Model } from './models/model';
-import { CommonModule } from '@angular/common';
+import { DATA } from '../assets/data';
+import { HeaderComponent } from './shared/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductListComponentComponent, HeaderComponent, CommonModule],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-
 export class AppComponent {
-
-
+  title = 'dipProject';
   productData = DATA;
-  constructor(){}
-
-  getInfo(val: Model.Product) {
-    console.log(val);
-  }
 }

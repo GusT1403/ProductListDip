@@ -1,0 +1,14 @@
+<p>products</p>
+
+<div class="productList">
+    <app-product-card
+    *ngFor="let item of list" [product]="item"
+    (productSelected)="goToDetails($event)"
+    ></app-product-card>
+</div> 
+
+<!-- <div class="productList">
+    @for (let item of list; track item.id) {
+        <app-product-card [product]="item" (productSelected)="goToDetails($event)"></app-product-card>
+    }
+</div> -->
