@@ -3,17 +3,14 @@
     <div class="container">
         <div class="card">
             <h2 class="card-title">{{product.name}}</h2>
-            <img src="{{product.image}}" alt="" class="card-img">
+            <img src="{{product.background_image}}" alt="" class="card-img">
             <div class="card-content">
-                <p class="card-description">{{product.description}}</p>
+                <p class="card-description">{{product.released}}</p>
             </div>
         </div>
         <div class="options">
             <h3>Base Game</h3>
             <ul>
-                <li>
-                    <p>${{product.price}}</p>
-                </li>
                 <li>
                     <button class="card-button" (click)="buyNow()">Buy Now</button>
                 </li>

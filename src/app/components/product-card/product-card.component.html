@@ -1,9 +1,9 @@
 @if (product) {
     <div class="productCard">
-        <img src="{{product.image}}" alt="" class="card-img">
+        <img src="{{product.background_image}}" alt="" class="card-img">
         <div class="card-content">
             <h2 class="card-title">{{product.name}}</h2>
-            <p class="card-description">{{product.description}}</p>
+            <p class="card-description">{{product.released}}</p>
             <button class="card-button" (click)="selectProduct()">Details</button>
         </div>
     </div>

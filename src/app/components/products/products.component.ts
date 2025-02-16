@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductCardComponent } from "../product-card/product-card.component";
 import { Product } from '../../shared/models/products.model';
 import { ProductsService } from '../../services/product-service.service';
@@ -9,14 +9,19 @@ import { Router, RouterModule } from '@angular/router';
   selector: 'app-products',
   imports: [ProductCardComponent, CommonModule, RouterModule],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
 
   list: Product[] = [];
 
-  constructor(private productService: ProductsService, private router: Router) {
-    productService.getProducts().subscribe(products => this.list = products);
+  constructor(private productService: ProductsService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe(products => {
+      this.list = products;
+      console.log(this.list);
+    });
   }
 
   goToDetails(product: Product) {
@@ -25,3 +30,4 @@ export class ProductsComponent {
   }
 
 }
+
